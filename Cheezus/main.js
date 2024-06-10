@@ -1,4 +1,3 @@
-import './style.css';
 import * as THREE from "./three/build/three.module.js";
 
 const scene = new THREE.Scene();
