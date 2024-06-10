@@ -16,7 +16,7 @@ scene.add(torus)
 
 function animate(){
     requestAnimationFrame(animate);
-    render.render(scene,camera)
+    renderer.render(scene,camera)
 }
 
 animate()
