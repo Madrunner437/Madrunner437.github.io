@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cheezus</title>
+    <title>Starting Screen</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="title-screen">
-        <div class="title-text">Cheezus</div>
-        <button class="start-button" onclick="startGame()">Start</button>
+    <div class="container">
+        <div class="row justify-content-center align-items-center" id="start-screen">
+            <h1>Welcome to My Game</h1>
+            <button class="btn btn-primary btn-lg" id="start-button">Start Game</button>
+        </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
