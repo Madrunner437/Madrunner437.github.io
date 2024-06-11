@@ -1,51 +1,27 @@
 import * as THREE from "./three/build/three.module.js";
 
+let isGameStarted = false;
+
 // Create a Three.js scene
 const scene = new THREE.Scene();
 
-// Create an orthogonal camera
-const width = window.innerWidth;
-const height = window.innerHeight;
-const camera = new THREE.OrthographicCamera(-width / 2, width / 2, height / 2, -height / 2, 0.1, 1000);
-
-// Position the camera tangent to the sphere's surface
-const cameraPosition = new THREE.Vector3(0, 0, 10); // Adjust the z value to move the camera closer or further from the sphere
-camera.position.copy(cameraPosition);
-
-// Look at the center of the sphere
-camera.lookAt(0, 0, 0);
+// Create a perspective camera
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+camera.position.set(0, 0, 10); // Set initial camera position
 
 // Create a WebGL renderer
 const renderer = new THREE.WebGLRenderer();
-renderer.setSize(width, height);
+renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
-// Create a shader material for the sphere
-const shaderMaterial = new THREE.ShaderMaterial({
-    vertexShader: `
-        varying vec3 vPos;
-
-        void main() {
-            vPos = position;
-            gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
-        }
-    `,
-    fragmentShader: `
-        varying vec3 vPos;
-
-        void main() {
-            float r = length(vPos);
-            vec3 color = vec3(r, r, r); // Use the position as the color
-            gl_FragColor = vec4(color, 1.0);
-        }
-    `
-});
+// Create a red material
+const material = new THREE.MeshBasicMaterial({ color: 0xff0000 });
 
 // Create a sphere geometry
 const geometry = new THREE.SphereGeometry(5, 32, 32);
 
-// Create a sphere mesh with the geometry and shader material
-const sphere = new THREE.Mesh(geometry, shaderMaterial);
+// Create a sphere mesh with the geometry and material
+const sphere = new THREE.Mesh(geometry, material);
 
 // Add the sphere to the scene
 scene.add(sphere);
@@ -57,9 +33,20 @@ const rotationSpeed = 0.01;
 function animate() {
     requestAnimationFrame(animate);
 
+    if (isGameStarted) {
+        // Move camera towards the sphere
+        camera.position.z -= 0.1;
+    }
+
     // Rotate the sphere
     sphere.rotation.y += rotationSpeed;
 
     renderer.render(scene, camera);
 }
 animate();
+
+function startGame() {
+    isGameStarted = true;
+    // Hide title screen
+    document.querySelector('.title-screen').style.display = 'none';
+}
