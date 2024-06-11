@@ -11,6 +11,12 @@
 #Text {
     width: 80vh;
     height: 20vh;
+    font-size: 5vw; /* Adjust the value to control the size relative to the viewport width */
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
 }
 
 #start-button {
