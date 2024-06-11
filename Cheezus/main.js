@@ -24,9 +24,17 @@ const sphere = new THREE.Mesh(geometry, material);
 // Add the sphere to the scene
 scene.add(sphere);
 
-// Render the scene
+// Define rotation speed
+const rotationSpeed = 0.01;
+
+// Render the scene and animate the rotation
 function animate() {
     requestAnimationFrame(animate);
+
+    // Rotate the sphere
+    sphere.rotation.x += rotationSpeed;
+    sphere.rotation.y += rotationSpeed;
+
     renderer.render(scene, camera);
 }
 animate();
