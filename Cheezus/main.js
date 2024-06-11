@@ -1,5 +1,5 @@
-import * as THREE from "./Cheezus/build/three.module.js";
-import { OrbitControls } from "./Cheezus/examples/jsm/controls/OrbitControls.js";
+import * as THREE from "./Cheezus/three/build/three.module.js";
+import { OrbitControls } from "./Cheezus/three/examples/jsm/controls/OrbitControls.js";
 
 // Initialize Three.js scene, camera, and renderer
 const scene = new THREE.Scene();
