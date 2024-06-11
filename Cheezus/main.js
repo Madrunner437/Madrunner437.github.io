@@ -12,7 +12,7 @@ const geometry = new THREE.SphereGeometry(5, 32, 32);
 
 // Load OpenStreetMap texture
 const textureLoader = new THREE.TextureLoader();
-const texture = textureLoader.load('https://tile.openstreetmap.org/13/1310/3288.png');
+const texture = textureLoader.load('https://www.openstreetmap.org/#map=18/55.59492/-2.11552');
 
 // Create a material with the OpenStreetMap texture
 const material = new THREE.MeshBasicMaterial({ map: texture });
