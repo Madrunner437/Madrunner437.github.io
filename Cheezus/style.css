@@ -2,6 +2,7 @@
     height: 40vh;
     opacity: 1;
     transition: opacity 0.5s ease; /* Add transition for opacity */
+    z-index: 2;
 }
 
 #start-screen.fade-out {
@@ -22,4 +23,8 @@
 #start-button {
     width: 80vh;
     height: 20vh;
+}
+
+#canvas {
+    z-index: 1;
 }
