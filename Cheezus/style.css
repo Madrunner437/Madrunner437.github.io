@@ -1,5 +1,31 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
 canvas {
-    position: fixed;
-    top: 0;
-    left: 0;
+    display: block;
+}
+
+.title-screen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.title-text {
+    color: rgba(150, 150, 150, 0.8);
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.start-button {
+    background-color: rgba(150, 150, 150, 0.5);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 2rem;
+    cursor: pointer;
 }
