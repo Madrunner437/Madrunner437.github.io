@@ -1,31 +1,51 @@
+/* Ensure the canvas container covers the entire viewport */
+#canvas-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Ensure it is behind the start screen */
+}
+
 #start-screen {
-    height: 40vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 2; /* Ensure it is on top of the canvas */
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: add a semi-transparent background */
     opacity: 1;
     transition: opacity 0.5s ease; /* Add transition for opacity */
-    z-index: 2;
 }
 
 #start-screen.fade-out {
     opacity: 0; /* Make the starting screen transparent when faded out */
 }
+
 #Text {
-    width: 80vh;
+    width: 80%;
     height: 20vh;
     font-size: 5vw; /* Adjust the value to control the size relative to the viewport width */
     text-align: center;
-    margin: 0;
+    margin: 0 0 20px 0;
     padding: 10px;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
+    color: #333; /* Dark text */
 }
 
 #start-button {
-    width: 80vh;
+    width: 80%;
     height: 20vh;
-}
-
-#canvas-container {
-    z-index: 1;
-    height:100vh;
-    width: 100vh;
+    font-size: 5vw; /* Adjust the value to control the size relative to the viewport width */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    border: none;
+    color: #333; /* Dark text */
+    cursor: pointer;
 }
