@@ -1,7 +1,9 @@
 #start-screen {
-    height: 40vh; /* Set height to 40% of the viewport height */
+    height: 40vh;
+    opacity: 1;
+    transition: opacity 0.5s ease; /* Add transition for opacity */
 }
 
-#start-button {
-    width: 100%; /* Make button take up full width */
+#start-screen.fade-out {
+    opacity: 0; /* Make the starting screen transparent when faded out */
 }
