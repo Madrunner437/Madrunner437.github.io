@@ -20,14 +20,32 @@ const renderer = new THREE.WebGLRenderer();
 renderer.setSize(width, height);
 document.body.appendChild(renderer.domElement);
 
-// Create a red material
-const material = new THREE.MeshBasicMaterial({ color: 0xff0000 });
+// Create a shader material for the sphere
+const shaderMaterial = new THREE.ShaderMaterial({
+    vertexShader: `
+        varying vec3 vPos;
+
+        void main() {
+            vPos = position;
+            gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+        }
+    `,
+    fragmentShader: `
+        varying vec3 vPos;
+
+        void main() {
+            float r = length(vPos);
+            vec3 color = vec3(r, r, r); // Use the position as the color
+            gl_FragColor = vec4(color, 1.0);
+        }
+    `
+});
 
 // Create a sphere geometry
 const geometry = new THREE.SphereGeometry(5, 32, 32);
 
-// Create a sphere mesh with the geometry and material
-const sphere = new THREE.Mesh(geometry, material);
+// Create a sphere mesh with the geometry and shader material
+const sphere = new THREE.Mesh(geometry, shaderMaterial);
 
 // Add the sphere to the scene
 scene.add(sphere);
@@ -45,5 +63,3 @@ function animate() {
     renderer.render(scene, camera);
 }
 animate();
-
-
