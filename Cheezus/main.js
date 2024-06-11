@@ -16,8 +16,8 @@ scene.add(backgroundSphere);
 
 // Bootstrap Interaction
 document.getElementById('start-button').addEventListener('click', function() {
-    // Hide the start screen
-    document.getElementById('start-screen').style.display = 'none';
+    // Fade out the start screen
+    document.getElementById('start-screen').classList.add('fade-out');
     
-    // Start the game or transition to the main screen
+    // Start the game or transition to the main screen after the fade-out animation completes
 });
