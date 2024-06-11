@@ -13,6 +13,7 @@ const material = new THREE.MeshBasicMaterial({color:0xFF6347,wireframe:true});
 const torus = new THREE.Mesh(geometry,material)
 
 scene.add(torus)
+scene.add(torus)
 
 function animate(){
     requestAnimationFrame(animate);
