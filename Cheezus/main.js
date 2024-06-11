@@ -8,15 +8,11 @@ const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
+// Create a red material
+const material = new THREE.MeshBasicMaterial({ color: 0xff0000 });
+
 // Create a sphere geometry
 const geometry = new THREE.SphereGeometry(5, 32, 32);
-
-// Load OpenStreetMap texture
-const textureLoader = new THREE.TextureLoader();
-const texture = textureLoader.load('https://a.tile.openstreetmap.org/{z}/{x}/{y}.png');
-
-// Create a material with the OpenStreetMap texture
-const material = new THREE.MeshBasicMaterial({ map: texture });
 
 // Create a sphere mesh with the geometry and material
 const sphere = new THREE.Mesh(geometry, material);
