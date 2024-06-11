@@ -5,7 +5,7 @@ const scene = new THREE.Scene();
 
 // Create a perspective camera
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-camera.position.z = 5;
+camera.position.set(0, 0, 2); // Adjust camera position to be closer to the surface of the sphere
 
 // Create a WebGL renderer
 const renderer = new THREE.WebGLRenderer();
@@ -31,7 +31,7 @@ const rotationSpeed = 0.01;
 function animate() {
     requestAnimationFrame(animate);
 
-    // Rotate the sphere
+    // Rotate the sphere northeast
     sphere.rotation.x += rotationSpeed;
     sphere.rotation.y += rotationSpeed;
 
