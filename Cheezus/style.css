@@ -7,3 +7,13 @@
 #start-screen.fade-out {
     opacity: 0; /* Make the starting screen transparent when faded out */
 }
+
+#Text {
+    width: 80vh;
+    height: 20vh;
+}
+
+#StartButton {
+    width: 80vh;
+    height: 20vh;
+}
