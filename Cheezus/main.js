@@ -1,6 +1,5 @@
 import * as THREE from "./three/build/three.module.js";
 
-
 // Three.js Setup
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -18,17 +17,15 @@ scene.add(backgroundSphere);
 // Position the camera farther away initially
 camera.position.z = 1500; // Far away from the sphere
 
-
 // Bootstrap Interaction
 document.getElementById('start-button').addEventListener('click', function() {
     // Fade out the start screen
     document.getElementById('start-screen').classList.add('fade-out');
 
-    // Start the game or transition to the main screen after the fade-out animation completes
-
     // Move the camera closer to the sphere after the fade-out animation completes
     setTimeout(() => {
         document.getElementById('start-screen').style.display = 'none';
+        document.getElementById('info-container').style.display = 'block'; // Show the info text and home button
 
         // Animation to move the camera closer to the sphere
         const targetPosition = { z: 1000 }; // Closer position
@@ -48,6 +45,11 @@ document.getElementById('start-button').addEventListener('click', function() {
 
         requestAnimationFrame(animateCamera);
     }, 500); // Match the transition duration
+});
+
+// Home button functionality
+document.getElementById('home-button').addEventListener('click', function() {
+    location.reload(); // Reload the page
 });
 
 // Animation loop
