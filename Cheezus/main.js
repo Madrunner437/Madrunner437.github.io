@@ -7,6 +7,7 @@ const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerH
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.getElementById('canvas-container').appendChild(renderer.domElement);
+
 // Add a large sphere to the scene
 const sphereGeometry = new THREE.SphereGeometry(500, 32, 32); // Increase the radius to make it large
 const sphereMaterial = new THREE.MeshBasicMaterial({ color: 0xffffff }); // White color
