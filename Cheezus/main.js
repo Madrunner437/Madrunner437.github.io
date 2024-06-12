@@ -75,10 +75,17 @@ document.getElementById('start-button').addEventListener('click', function() {
 function animate() {
     requestAnimationFrame(animate);
     // Rotate the sphere based on WASD input
-    if (keyState.w) backgroundSphere.rotation.x -= 0.01;
-    if (keyState.s) backgroundSphere.rotation.x += 0.01;
-    if (keyState.a) backgroundSphere.rotation.y -= 0.01;
-    if (keyState.d) backgroundSphere.rotation.y += 0.01;
+    if (keyState.w) {
+        backgroundSphere.rotation.x -= 0.01
+    }else if (keyState.s) {
+        backgroundSphere.rotation.x += 0.01
+    }else if (keyState.a){
+        backgroundSphere.rotation.y -= 0.01
+    }else if (keyState.d) {
+        backgroundSphere.rotation.y += 0.01
+    }else {
+        backgroundSphere.rotation.y += 0.001
+    }
     renderer.render(scene, camera);
 }
 
