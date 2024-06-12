@@ -17,6 +17,30 @@ scene.add(backgroundSphere);
 // Position the camera farther away initially
 camera.position.z = 1500; // Far away from the sphere
 
+// WASD controls setup
+const keyState = {
+    w: false,
+    a: false,
+    s: false,
+    d: false
+};
+
+document.addEventListener('keyup', (event) => {
+    switch (event.key.toLowerCase()) {
+        case 'w':
+            keyState.w = false;
+            break;
+        case 'a':
+            keyState.a = false;
+            break;
+        case 's':
+            keyState.s = false;
+            break;
+        case 'd':
+            keyState.d = false;
+            break;
+    }
+});
 
 // Bootstrap Interaction
 document.getElementById('start-button').addEventListener('click', function() {
@@ -50,6 +74,11 @@ document.getElementById('start-button').addEventListener('click', function() {
 // Animation loop
 function animate() {
     requestAnimationFrame(animate);
+    // Rotate the sphere based on WASD input
+    if (keyState.w) backgroundSphere.rotation.x -= 0.01;
+    if (keyState.s) backgroundSphere.rotation.x += 0.01;
+    if (keyState.a) backgroundSphere.rotation.y -= 0.01;
+    if (keyState.d) backgroundSphere.rotation.y += 0.01;
     renderer.render(scene, camera);
 }
 
