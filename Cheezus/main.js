@@ -10,7 +10,7 @@ document.getElementById('canvas-container').appendChild(renderer.domElement);
 
 
 // Apply map tiles to sphere material
-const sphereMaterial = new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load(osmTiles) }); // Use the map tiles as 
+const sphereMaterial = new THREE.MeshBasicMaterial(); // Use the map tiles as 
 // Add a large sphere to the scene
 const sphereGeometry = new THREE.SphereGeometry(500, 32, 32); // Increase the radius to make it large
 const backgroundSphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
