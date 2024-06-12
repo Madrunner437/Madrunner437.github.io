@@ -9,7 +9,7 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 document.getElementById('canvas-container').appendChild(renderer.domElement);
 
 // OpenStreetMap tile server URL template
-const osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+const osmUrl = 'https://a.tile.openstreetmap.org/8/52.180/-3.342.png';
 
 // Create OpenStreetMap tile layer
 const osmTiles = new L.TileLayer(osmUrl, {
