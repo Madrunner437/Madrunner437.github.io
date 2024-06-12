@@ -8,9 +8,18 @@ const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.getElementById('canvas-container').appendChild(renderer.domElement);
 
+// OpenStreetMap tile server URL template
+const osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+
+// Create OpenStreetMap tile layer
+const osmTiles = new L.TileLayer(osmUrl, {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
+});
+
+// Apply map tiles to sphere material
+const sphereMaterial = new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load(osmTiles) }); // Use the map tiles as 
 // Add a large sphere to the scene
 const sphereGeometry = new THREE.SphereGeometry(500, 32, 32); // Increase the radius to make it large
-const sphereMaterial = new THREE.MeshBasicMaterial({ color: 0xffffff }); // White color
 const backgroundSphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
 scene.add(backgroundSphere);
 
