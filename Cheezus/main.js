@@ -9,14 +9,6 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 document.getElementById('canvas-container').appendChild(renderer.domElement);
 
 
-// OpenStreetMap tile server URL template
-const osmUrl = 'https://a.tile.openstreetmap.org/8/52/3.png';
-
-// Create OpenStreetMap tile layer
-const osmTiles = new L.TileLayer(osmUrl, {
-    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
-});
-
 // Apply map tiles to sphere material
 const sphereMaterial = new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load(osmTiles) }); // Use the map tiles as 
 // Add a large sphere to the scene
