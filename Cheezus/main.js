@@ -19,9 +19,6 @@ scene.add(backgroundSphere);
 camera.position.z = 1500; // Far away from the sphere
 
 const controls = new OrbitControls(camera, renderer.domElement);
-controls.enableZoom = true;
-controls.enablePan = false;
-
 // Bootstrap Interaction
 document.getElementById('start-button').addEventListener('click', function() {
     // Fade out the start screen
