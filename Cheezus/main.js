@@ -8,7 +8,7 @@ document.getElementById('canvas-container').appendChild(renderer.domElement);
 
 // Load the image texture
 const textureLoader = new THREE.TextureLoader();
-const imageUrl = 'path_to_your_image.jpg'; // Replace 'path_to_your_image.jpg' with the path to your image
+const imageUrl = 'https://deih43ym53wif.cloudfront.net/region-map-of-wales_335b997b72.png'; // Replace 'path_to_your_image.jpg' with the path to your image
 const texture = textureLoader.load(imageUrl);
 
 // Apply the image texture to the sphere material
