@@ -19,6 +19,12 @@ scene.add(backgroundSphere);
 // Position the camera farther away initially
 camera.position.z = 1500; // Far away from the sphere
 
+// OrbitControls setup
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true;  // Enable smooth damping for camera control
+controls.dampingFactor = 0.05;  // Set the damping factor
+
+
 // Bootstrap Interaction
 document.getElementById('start-button').addEventListener('click', function() {
     // Fade out the start screen
@@ -54,6 +60,7 @@ document.getElementById('start-button').addEventListener('click', function() {
 function animate() {
     requestAnimationFrame(animate);
     backgroundSphere.rotation.y += 0.001; // Rotate the sphere for effect
+    controls.update()
     renderer.render(scene, camera);
 }
 
