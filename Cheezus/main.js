@@ -8,23 +8,9 @@ const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.getElementById('canvas-container').appendChild(renderer.domElement);
 
-function latLonToTileCoords(lat, lon, zoom) {
-    const R = 6378137; // Earth's radius in meters
-    const tileSize = 256; // Size of each tile in pixels
-
-    // Convert latitude and longitude to Mercator projection
-    const x = R * (lon * Math.PI / 180);
-    const y = R * Math.log(Math.tan(Math.PI / 4 + lat * Math.PI / 360));
-
-    // Convert Mercator projection to tile coordinates
-    const tileX = Math.floor((x + Math.PI) / (2 * Math.PI / Math.pow(2, zoom)));
-    const tileY = Math.floor((Math.PI - y) / (2 * Math.PI / Math.pow(2, zoom)));
-
-    return { x: tileX, y: tileY };
-}
 
 // OpenStreetMap tile server URL template
-const osmUrl = 'https://a.tile.openstreetmap.org/8/52/-3.png';
+const osmUrl = 'https://a.tile.openstreetmap.org/8/52/3.png';
 
 // Create OpenStreetMap tile layer
 const osmTiles = new L.TileLayer(osmUrl, {
