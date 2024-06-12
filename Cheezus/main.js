@@ -54,7 +54,6 @@ document.getElementById('start-button').addEventListener('click', function() {
 function animate() {
     requestAnimationFrame(animate);
     backgroundSphere.rotation.y += 0.001; // Rotate the sphere for effect
-    controls.update()
     renderer.render(scene, camera);
 }
 
