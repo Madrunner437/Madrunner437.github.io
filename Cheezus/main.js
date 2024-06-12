@@ -10,9 +10,14 @@ document.getElementById('canvas-container').appendChild(renderer.domElement);
 
 // Add a large sphere to the scene
 const sphereGeometry = new THREE.SphereGeometry(500, 32, 32); // Increase the radius to make it large
-const sphereMaterial = new THREE.MeshBasicMaterial({ color: 0xffffff }); // White color
+const sphereMaterial = new THREE.MeshPhongMaterial({ color: 0xff0000 }); // Use Phong material for shading
 const backgroundSphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
 scene.add(backgroundSphere);
+
+// Add a light source
+const light = new THREE.PointLight(0xffffff, 1, 1000);
+light.position.set(0, 0, 500); // Position the light source
+scene.add(light);
 
 // Position the camera farther away initially
 camera.position.z = 1500; // Far away from the sphere
