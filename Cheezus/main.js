@@ -4,7 +4,7 @@ import * as THREE from "./three/build/three.module.js";
 // Three.js Setup
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-@@ -11,13 +12,45 @@ document.getElementById('canvas-container').appendChild(renderer.domElement);
+document.getElementById('canvas-container').appendChild(renderer.domElement);
 const sphereGeometry = new THREE.SphereGeometry(500, 32, 32); // Increase the radius to make it large
 const sphereMaterial = new THREE.MeshBasicMaterial({ color: 0xffffff }); // White color
 const backgroundSphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
