@@ -22,7 +22,7 @@ function latLonToTileCoords(lat, lon, zoom) {
 }
 
 // OpenStreetMap tile server URL template
-const osmUrl = 'https://a.tile.openstreetmap.org/8/52/3.png';
+const osmUrl = 'https://a.tile.openstreetmap.org/8/5800041/66587.png';
 
 // Create OpenStreetMap tile layer
 const osmTiles = new L.TileLayer(osmUrl, {
