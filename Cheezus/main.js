@@ -1,5 +1,4 @@
 import * as THREE from "./three/build/three.module.js";
-import {OrbitControls} from "./three/examples/jsm/controls/OrbitControls.js";  // Import OrbitControls
 
 
 // Three.js Setup
@@ -18,11 +17,6 @@ scene.add(backgroundSphere);
 
 // Position the camera farther away initially
 camera.position.z = 1500; // Far away from the sphere
-
-// OrbitControls setup
-const controls = new OrbitControls(camera, renderer.domElement);
-controls.enableDamping = true;  // Enable smooth damping for camera control
-controls.dampingFactor = 0.05;  // Set the damping factor
 
 
 // Bootstrap Interaction
