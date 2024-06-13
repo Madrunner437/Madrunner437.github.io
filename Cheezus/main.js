@@ -57,7 +57,7 @@ document.getElementById('start-button').addEventListener('click', function() {
         document.getElementById("start-screen").appendChild(EventButton);
         EventButton.addEventListener('click', function() {
             // Redirect to another webpage
-            window.location.href = 'https://www.google.com';
+            window.location.href = 'https://madrunner437.github.io/Cheezus/Register.html';
         });
         // Animation to move the camera closer to the sphere
         const targetPosition = { z: 1000 }; // Closer position
