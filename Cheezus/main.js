@@ -26,6 +26,7 @@ document.getElementById('start-button').addEventListener('click', function() {
     setTimeout(() => {
         document.getElementById('start-screen').style.display = 'none';
         document.getElementById('info-container').style.display = 'block'; // Show the info text and home button
+        document.getEleentById("info-container").classList.add("fade-in");
 
         // Animation to move the camera closer to the sphere
         const targetPosition = { z: 1000 }; // Closer position
