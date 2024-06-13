@@ -24,7 +24,6 @@ document.getElementById('start-button').addEventListener('click', function() {
         // Create a button element
         var button = document.createElement('button');
         button.textContent = 'Home page';
-        button.id = "Home_button";
         document.getElementById("start-screen").appendChild(textElement);
         document.getElementById("start-screen").appendChild(button);
         // Animation to move the camera closer to the sphere
