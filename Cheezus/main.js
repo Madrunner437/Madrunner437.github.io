@@ -15,12 +15,15 @@ scene.add(backgroundSphere);
 camera.position.z = 1500; // Far away from the sphere
 // Bootstrap Interaction
 document.getElementById('start-button').addEventListener('click', function() {
-    document.getElementById('start-screen').classList.add('fade-out');
     // Start the game or transition to the main screen after the fade-out animation completes
     // Move the camera closer to the sphere after the fade-out animation completes
     setTimeout(() => {
-        document.getElementById('start-screen').style.display = 'none';
-        document.getElementById("info-container").classList.add("fade-in");
+        document.getElementbyId("start-screen").innerHtml = "";
+        var textElement = document.createElement('p');
+        textElement.textContent = 'This is a text element.';
+        // Create a button element
+        var button = document.createElement('button');
+        button.textContent = 'Click Me';
         // Animation to move the camera closer to the sphere
         const targetPosition = { z: 1000 }; // Closer position
         const duration = 2000; // Duration of the animation in milliseconds
