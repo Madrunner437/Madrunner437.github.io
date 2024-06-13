@@ -22,7 +22,10 @@ document.getElementById('start-button').addEventListener('click', function() {
     // Start the game or transition to the main screen after the fade-out animation completes
     // Move the camera closer to the sphere after the fade-out animation completes
     setTimeout(() => {
-        document.getElementById("start-screen").innerHTML = ""; // Corrected typo
+        var container = document.getElementById("start-screen");
+        while (container.firstChild) {
+                    container.removeChild(container.firstChild);
+                }
         var textElement = document.createElement('p');
         textElement.textContent = 'This is a skeleton website. This game has not been created yet.';
         // Create a button element
