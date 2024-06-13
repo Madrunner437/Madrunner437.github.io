@@ -46,7 +46,7 @@ document.getElementById('start-button').addEventListener('click', function() {
         startScreen.style.flexDirection = 'column';
         startScreen.style.zIndex = '2';
         startScreen.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
-        startScreen.style.opacity = '1';
+        startScreen.style.opacity = '0.6';
         startScreen.style.transition = 'opacity 0.5s ease';
 
         // Animation to move the camera closer to the sphere
