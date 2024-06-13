@@ -12,13 +12,8 @@
      top: 50%; 
      left: 50%; 
      color: white; 
-     text-align: center;
      z-index: 2;
-     opacity:0;
  }
-#info-container.fade-in {
-    opacity: 1;
-}
 #start-screen {
     position: absolute;
     top: 0;
