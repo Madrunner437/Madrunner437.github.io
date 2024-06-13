@@ -31,6 +31,10 @@ document.getElementById('start-button').addEventListener('click', function() {
         // Create a button element
         var button = document.createElement('button');
         button.textContent = 'Home page';
+        button.addEventListener('click', function() {
+        // Reload the page
+        location.reload();
+        });
         document.getElementById("start-screen").appendChild(textElement);
         document.getElementById("start-screen").appendChild(button);
         var startScreen = document.getElementById('start-screen');
