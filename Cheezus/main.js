@@ -26,7 +26,7 @@ document.getElementById('start-button').addEventListener('click', function() {
         while (container.firstChild) {
                     container.removeChild(container.firstChild);
                 }
-        var textElement = document.createElement('p');
+        var textElement = document.createElement('h1');
         textElement.textContent = 'This is a skeleton website. This game has not been created yet.';
         // Create a button element
         var button = document.createElement('button');
