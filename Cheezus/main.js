@@ -21,6 +21,7 @@ document.getElementById('start-button').addEventListener('click', function() {
     // Move the camera closer to the sphere after the fade-out animation completes
     setTimeout(() => {
         document.getElementById('start-screen').style.display = 'none';
+        document.getElementById("info-container").classList.add("fade-in");
         // Animation to move the camera closer to the sphere
         const targetPosition = { z: 1000 }; // Closer position
         const duration = 2000; // Duration of the animation in milliseconds
