@@ -52,7 +52,9 @@ document.getElementById('start-button').addEventListener('click', function() {
         startScreen.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
         startScreen.style.opacity = '0.6';
         startScreen.style.transition = 'opacity 0.5s ease';
-
+        var EventButton = document.createElement("button");
+        EventButton.textContent = "Register for event";
+        document.getElementById("start-screen").appendChild(EventButton);
         // Animation to move the camera closer to the sphere
         const targetPosition = { z: 1000 }; // Closer position
         const duration = 2000; // Duration of the animation in milliseconds
