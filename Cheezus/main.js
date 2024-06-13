@@ -40,7 +40,7 @@ document.getElementById('start-button').addEventListener('click', function() {
         var startScreen = document.getElementById('start-screen');
         // Add styles to the element
         startScreen.style.position = 'absolute';
-        startScreen.style.top = '0';
+        startScreen.style.top = '40%';
         startScreen.style.left = '0';
         startScreen.style.width = '100%';
         startScreen.style.height = '100%';
