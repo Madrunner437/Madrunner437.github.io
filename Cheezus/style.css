@@ -17,7 +17,7 @@
      opacity:0;
  }
 #info-container.fade-in {
-    opaciity: 1
+    opaciity: 1;
 }
 #start-screen {
     position: absolute;
