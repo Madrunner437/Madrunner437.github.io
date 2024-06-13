@@ -20,10 +20,13 @@ document.getElementById('start-button').addEventListener('click', function() {
     setTimeout(() => {
         document.getElementbyId("start-screen").innerHtml = "";
         var textElement = document.createElement('p');
-        textElement.textContent = 'This is a text element.';
+        textElement.textContent = 'This is a skeleton website. This game has not been created yet.';
         // Create a button element
         var button = document.createElement('button');
-        button.textContent = 'Click Me';
+        button.textContent = 'Home page';
+        button.id = "Home_button";
+        document.getElementById("start-screen").appendChild(textElement);
+        document.getElementById("start-screen").appendChild(button);
         // Animation to move the camera closer to the sphere
         const targetPosition = { z: 1000 }; // Closer position
         const duration = 2000; // Duration of the animation in milliseconds
