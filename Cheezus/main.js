@@ -34,7 +34,14 @@ document.getElementById('start-button').addEventListener('click', function() {
         button.addEventListener('click', function() {
         // Reload the page
         location.reload();
-        });
+            });
+        button.style.width = '80%';
+        button.style.height = '20vh';
+        button.style.fontSize = '5vw';
+        button.style.backgroundColor = 'rgba(255, 255, 255, 0.8)';
+        button.style.border = 'none';
+        button.style.color = '#333';
+        button.style.cursor = 'pointer';
         document.getElementById("start-screen").appendChild(textElement);
         document.getElementById("start-screen").appendChild(button);
         var startScreen = document.getElementById('start-screen');
