@@ -25,7 +25,6 @@ document.getElementById('start-button').addEventListener('click', function() {
     // Move the camera closer to the sphere after the fade-out animation completes
     setTimeout(() => {
         document.getElementById('start-screen').style.display = 'none';
-        document.getElementById('info-container').style.display = 'block'; // Show the info text and home button
         document.getEleentById("info-container").classList.add("fade-in");
 
         // Animation to move the camera closer to the sphere
