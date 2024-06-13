@@ -58,7 +58,14 @@ document.getElementById('start-button').addEventListener('click', function() {
         EventButton.addEventListener('click', function() {
             // Redirect to another webpage
             window.location.href = 'https://madrunner437.github.io/Cheezus/Register.html';
-        });
+            });
+        EventButton.style.width = '80%';
+        EventButton.style.height = '20vh';
+        EventButton.style.fontSize = '5vw';
+        EventButton.style.backgroundColor = 'rgba(255, 255, 255, 0.8)';
+        EventButton.style.border = 'none';
+        EventButton.style.color = '#333';
+        EventButton.style.cursor = 'pointer';
         // Animation to move the camera closer to the sphere
         const targetPosition = { z: 1000 }; // Closer position
         const duration = 2000; // Duration of the animation in milliseconds
