@@ -55,6 +55,10 @@ document.getElementById('start-button').addEventListener('click', function() {
         var EventButton = document.createElement("button");
         EventButton.textContent = "Register for event";
         document.getElementById("start-screen").appendChild(EventButton);
+        EventButton.addEventListener('click', function() {
+            // Redirect to another webpage
+            window.location.href = 'https://www.google.com';
+        });
         // Animation to move the camera closer to the sphere
         const targetPosition = { z: 1000 }; // Closer position
         const duration = 2000; // Duration of the animation in milliseconds
