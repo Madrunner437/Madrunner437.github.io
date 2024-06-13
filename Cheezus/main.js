@@ -64,7 +64,7 @@ document.getElementById('start-button').addEventListener('click', function() {
         document.getElementById("start-screen").appendChild(EventButton);
         EventButton.addEventListener('click', function() {
             // Redirect to another webpage
-            window.location.href = 'https://madrunner437.github.io/Cheezus/Register.html';
+            window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSe_QZTQYdw53eVUDQpGUMeIZ2uY3njrUDBP8pSebMmu6WGckQ/viewform?vc=0&c=0&w=1&flr=0';
             });
         EventButton.style.width = '80%';
         EventButton.style.height = '20vh';
