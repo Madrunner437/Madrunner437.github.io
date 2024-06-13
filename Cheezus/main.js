@@ -33,6 +33,21 @@ document.getElementById('start-button').addEventListener('click', function() {
         button.textContent = 'Home page';
         document.getElementById("start-screen").appendChild(textElement);
         document.getElementById("start-screen").appendChild(button);
+        var startScreen = document.getElementById('start-screen');
+        // Add styles to the element
+        startScreen.style.position = 'absolute';
+        startScreen.style.top = '0';
+        startScreen.style.left = '0';
+        startScreen.style.width = '100%';
+        startScreen.style.height = '100%';
+        startScreen.style.display = 'flex';
+        startScreen.style.justifyContent = 'center';
+        startScreen.style.alignItems = 'center';
+        startScreen.style.flexDirection = 'column';
+        startScreen.style.zIndex = '2';
+        startScreen.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+        startScreen.style.opacity = '1';
+        startScreen.style.transition = 'opacity 0.5s ease';
 
         // Animation to move the camera closer to the sphere
         const targetPosition = { z: 1000 }; // Closer position
